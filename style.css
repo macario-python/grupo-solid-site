@@ -301,3 +301,99 @@ a:focus-visible,button:focus-visible{
   .card-grid{grid-template-columns:1fr;}
   .mini-card-grid{grid-template-columns:1fr;}
 }
+
+/* ===== Logo real (header/footer) ===== */
+.brand-logo{height:40px;width:auto;object-fit:contain;flex:none;}
+.footer-logo{height:44px;width:auto;object-fit:contain;flex:none;}
+
+/* ===== Hero em imagem única ===== */
+.hero-img-full{
+  width:100%;display:block;max-height:640px;object-fit:cover;object-position:center top;
+}
+
+/* ===== Quem Somos ===== */
+.about-copy p{margin-bottom:16px;}
+.mvv-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px;
+}
+.mvv-card{
+  background:var(--white);border:1px solid var(--line-dark);border-radius:var(--radius);
+  padding:30px 26px;box-shadow:0 10px 26px rgba(8,16,41,.05);
+}
+.mvv-card h4{
+  color:var(--gold-500);font-size:.78rem;letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:14px;font-family:var(--sans);font-weight:700;
+}
+.mvv-card p{font-size:.9rem;color:var(--navy-900);opacity:.75;line-height:1.7;}
+.mvv-card ul{margin-top:2px;}
+.mvv-card li{font-size:.9rem;color:var(--navy-900);opacity:.8;line-height:1.7;margin-bottom:10px;}
+.mvv-card li strong{color:var(--navy-900);opacity:1;}
+
+/* ===== Unidades ===== */
+.units-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.unit-card{
+  background:var(--white);border:1px solid var(--line-dark);border-radius:var(--radius);
+  padding:30px 26px;box-shadow:0 10px 26px rgba(8,16,41,.05);text-align:center;
+}
+.unit-card .unit-icon{
+  width:50px;height:50px;border-radius:50%;background:rgba(212,175,55,.12);
+  display:flex;align-items:center;justify-content:center;margin:0 auto 16px;color:var(--gold-500);
+}
+.unit-card .unit-icon svg{width:22px;height:22px;}
+.unit-card h4{font-size:1rem;color:var(--navy-900);margin-bottom:10px;}
+.unit-card p{font-size:.86rem;color:var(--navy-900);opacity:.7;line-height:1.6;}
+
+/* ===== Contato (formulário + info) ===== */
+.contact-section{background:var(--navy-950);color:var(--white);padding:96px 0;}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;}
+.contact-info .eyebrow{color:var(--gold-400);}
+.contact-info h2{font-size:2.1rem;color:var(--white);margin:14px 0 16px;}
+.contact-info>p{color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:36px;}
+.contact-item{display:flex;align-items:flex-start;gap:16px;margin-bottom:26px;}
+.contact-item .icon{
+  width:44px;height:44px;border-radius:50%;background:rgba(212,175,55,.14);
+  display:flex;align-items:center;justify-content:center;color:var(--gold-400);flex:none;
+}
+.contact-item .icon svg{width:20px;height:20px;}
+.contact-item h5{font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-400);margin-bottom:4px;}
+.contact-item p{font-size:.92rem;color:rgba(255,255,255,.85);}
+.contact-item p+p{margin-top:4px;}
+.contact-item p strong{color:var(--gold-300);}
+
+.contact-form{
+  background:var(--white);border-radius:var(--radius);padding:40px 36px;box-shadow:var(--shadow);
+}
+.contact-form h3{color:var(--navy-900);font-size:1.4rem;margin-bottom:24px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.form-group{margin-bottom:18px;}
+.form-group.full{grid-column:1/-1;}
+.form-group label{
+  display:block;font-size:.78rem;font-weight:600;color:var(--navy-900);margin-bottom:8px;
+  letter-spacing:.3px;
+}
+.form-group input,.form-group select,.form-group textarea{
+  width:100%;padding:12px 14px;border:1px solid var(--line-dark);border-radius:8px;
+  font-family:var(--sans);font-size:.9rem;color:var(--navy-900);background:var(--off-white);
+  transition:border-color .2s ease;
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+  outline:none;border-color:var(--gold-500);
+}
+.form-group textarea{min-height:110px;resize:vertical;}
+.btn-submit{
+  width:100%;background:var(--gold-500);color:var(--navy-950);border:none;padding:15px 26px;
+  border-radius:8px;font-size:.85rem;letter-spacing:1px;text-transform:uppercase;font-weight:700;
+  cursor:pointer;transition:background .2s ease;
+}
+.btn-submit:hover{background:var(--gold-400);}
+.form-success{display:none;margin-top:16px;font-size:.88rem;color:#2f8f5b;font-weight:600;}
+.form-success.show{display:block;}
+
+@media (max-width:1024px){
+  .contact-grid{grid-template-columns:1fr;}
+  .mvv-grid{grid-template-columns:1fr;}
+  .units-grid{grid-template-columns:1fr;}
+}
+@media (max-width:720px){
+  .form-row{grid-template-columns:1fr;}
+}
